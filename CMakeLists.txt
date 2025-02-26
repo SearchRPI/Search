@@ -5,6 +5,8 @@ project(SearchRPI VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include(FetchContent)
+
 enable_testing()
 
 # Add the include directory (avoids needing relative paths)
@@ -23,6 +25,7 @@ FetchContent_MakeAvailable(googletest)
 file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cc)
 
 # Find all test source files in the tests directory
+
 file(GLOB_RECURSE TEST_FILES ${CMAKE_SOURCE_DIR}/tests/*.cc)
 
 # Create a library from source files
